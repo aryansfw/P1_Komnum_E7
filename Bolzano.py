@@ -1,3 +1,4 @@
+import math
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import numpy as np
@@ -22,10 +23,10 @@ class Bolzano():
             n = len(this.persamaan)
             for i in range(0, n):
                 coeff = this.persamaan[i]
-                y += coeff * x**(n - i)
-                y1 += coeff * x1**(n - i)
-                y2 += coeff * x2**(n - i)
-                y3 += coeff * x3**(n - i)
+                y += coeff * x**(n - i - 1)
+                y1 += coeff * x1**(n - i - 1)
+                y2 += coeff * x2**(n - i - 1)
+                y3 += coeff * x3**(n - i - 1)
         
         return y, y1, y2, y3
 
@@ -83,8 +84,8 @@ class Bolzano():
     def plot(this):
         print("No    x1      x2      x3      f(x1)   f(x2)   f(x3)")
         animation = FuncAnimation(this.fig, this.animate, this.iterasi, this.clear_plot, interval=250, blit=True, repeat=False)
-        plt.axvline(x=0, c="black", label="x=0")
-        plt.axhline(y=0, c="black", label="y=0")
+        plt.axvline(x=0, c="black")
+        plt.axhline(y=0, c="black")
         plt.xlabel("x")
         plt.ylabel("y")
         plt.legend()
@@ -106,8 +107,9 @@ def prompt():
 
     return persamaan, interval, iterasi
 
+# Biarkan fungsi ini return None jika ingin memasukkan fungsi di input
+# Ubah return menjadi fungsi yang diinginkan (misal: x**2 + x + 1) jika ingin fungsi yang custom
 def f(x):
-    # return x**3 + x**2 - 3*x - 3
     return None
 
 if __name__ == "__main__":
