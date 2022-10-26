@@ -64,7 +64,7 @@ Input persamaan (Misal: x + 3x - 1 = 0 -> 1 3 -1): 6 9 -4
 Input interval (Misal: x1 = 0, x2 = 1 -> 0 1): 0 1
 Input banyak iterasi: 20
 ```
-Jika di-enter lagi akan muncul sebagai berikut.\
+Jika di-enter lagi akan muncul sebagai berikut. (file gif mungkin lama untuk load)\ 
 ![demo1](https://user-images.githubusercontent.com/115603634/198011247-ae0b59cd-0f73-4285-979d-5e72e8b6c131.gif)\
 Pada setiap iterasi, nilai <code>x<sub>3</sub></code> akan semakin mendekati nilai akar persamaan. Semakin banyak iterasi maka semakin tinggi presisi nilai akar persamaan. Pada akhir semua iterasi, diperoleh `x = 0.35868`.
 
@@ -85,7 +85,7 @@ $ python bolzano.py
 Input interval (Misal: x1 = 0, x2 = 1 -> 0 1): -1 0
 Input banyak iterasi: 20
 ```
-Kemudian jika di-enter lagi akan muncul seperti berikut.
+Kemudian jika di-enter lagi akan muncul seperti berikut. (file gif mungkin lama untuk load)
 ![demo (1)](https://user-images.githubusercontent.com/115603634/198006634-3442bb08-5903-431c-935c-81b0b8c73464.gif)
 Pada akhir iterasi, diperoleh `x = -0.70347`.
 
